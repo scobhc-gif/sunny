@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6e6;
+      color: #b30059;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff0f5;
+      border: 2px solid #ff66b2;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    button {
+      margin: 10px 20px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: white;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+    }
+    .yes-btn {
+      background-color: #ff4d94;
+    }
+    .no-btn {
+      background-color: #999999;
+    }
+    #funny-question {
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: #cc0066;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Valentine's Day, Shruti! ❤️</h1>
+    <p>Will you be my Valentine?</p>
+    <button class="yes-btn" onclick="sayYes()">Yes</button>
+    <button class="no-btn" onclick="askFunny()">No</button>
+    <p id="funny-question"></p>
+  </div>
+
+  <script>
+    function sayYes() {
+      alert("Yay! You said YES! ❤️ I’m so happy, Shruti!");
+    }
+
+    function askFunny() {
+      const funnyQuestions = [
+        "Are you sure? Because I make a great chocolate thief! 🍫😄",
+        "No? But who will laugh at my terrible jokes then? 😂",
+        "If not me, then who? The pizza delivery guy? 🍕",
+        "Are you avoiding me because I dance like a penguin? 🐧",
+        "No? Okay, but can I at least have a hug? 🤗"
+      ];
+      const randomIndex = Math.floor(Math.random() * funnyQuestions.length);
+      const questionElem = document.getElementById('funny-question');
+      questionElem.textContent = funnyQuestions[randomIndex];
+      questionElem.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
